@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CountDown Timer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .countdown_timer_area {
+        background: url(https://cdn.pixabay.com/photo/2022/03/04/15/14/river-7047522_960_720.jpg)
+          no-repeat scroll 0 0 / cover;
+        width: 100vw;
+        height: 100vh;
+      }
+      .countdown_container {
+        position: relative;
+        padding: 40px;
+        text-align: center;
+        margin: 0 auto;
+      }
+      .countdown_container::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #ffffff8a;
+        z-index: 1;
+        border: 16px solid #ffffff20;
+      }
+      .countdown_items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 20px;
+        margin-top: 25px;
+      }
+      .single-item {
+        background: #000000;
+        border-radius: 25px;
+        width: 180px;
+        height: 180px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .single-item p {
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 48px;
+      }
+      .single-item h3 {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      .single-item span {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body style="margin: 0px; padding: 0px">
+    <div class="countdown_timer_area py-16">
+      <div class="countdown_container max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold z-10 relative mx-auto">
+          2022 New Event?
+        </h2>
+        <div class="countdown_items z-10 relative">
+          <!-- days  -->
+          <div class="single-item">
+            <span>
+              <p id="days-d">0</p>
+              <h3>Days</h3>
+            </span>
+          </div>
+          <!-- Hour  -->
+          <div class="single-item">
+            <span>
+              <p id="days-h">0</p>
+              <h3>Hour</h3>
+            </span>
+          </div>
+          <!-- Minutes  -->
+          <div class="single-item">
+            <span>
+              <p id="days-m">0</p>
+              <h3>Minutes</h3>
+            </span>
+          </div>
+          <!-- Second  -->
+          <div class="single-item">
+            <span>
+              <p id="days-c">0</p>
+              <h3>Second</h3>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
